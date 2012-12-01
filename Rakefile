@@ -496,49 +496,5 @@ task :list do
   puts "(type rake -T for more detail)\n\n"
 end
 
-desc "backup to GitHub"
-multitask :backup do
-  puts "\n## Backing up to GitHub"
-  system "git add ."
-  system "git add -u"
-  message = "Site updated at #{Time.now.utc}"
-  system "git commit -m '#{message}'"
-  system "git push origin #{deploy_branch}"
-  puts "\n## GitHub backup complete"
-end
-
-desc "deploy basic rack app to heroku"
-  multitask :heroku do
-    puts "## Deploying to Heroku "
-    (Dir["#{heroku_dir}/public/*"]).each { |f| rm_rf(f) }
-    system "cp -R #{public_dir}/* #{heroku_dir}/public"
-    puts "\n## copying #{public_dir} to #{heroku_dir}/public"
-    cd "#{heroku_dir}" do
-      system "git add ."
-      system "git add -u"
-      puts "\n## Committing: Site updated at #{Time.now.utc}"
-      message = "Site updated at #{Time.now.utc}"
-      system "git commit -m '#{message}'"
-      puts "\n## Pushing generated #{heroku_dir} website"
-      system "git push heroku #{deploy_branch}"
-      puts "\n## Heroku deploy complete"
-    end
-  end
-
-desc "deploy basic rack app to nginx server"
-  multitask :nginx do
-    puts "## Deploying to nginx server"
-    (Dir["#{nginx_dir}/www/*"]).each { |f| rm_rf(f) }
-    system "cp -R #{public_dir}/* #{nginx_dir}/www"
-    puts "\n## copying #{public_dir} to #{nginx_dir}/www"
-    cd "#{nginx_dir}" do
-      system "git add ."
-      system "git add -u"
-      puts "\n## Committing: Site updated at #{Time.now.utc}"
-      message = "Site updated at #{Time.now.utc}"
-      system "git commit -m '#{message}'"
-      puts "\n## Pushing generated #{nginx_dir} website"
-      system "git push origin #{deploy_branch}"
-      puts "\n## Heroku deploy complete"
-    end
-  end
+#Load custom rake scripts
+Dir['_rake/*.rake'].each { |r| load r }
