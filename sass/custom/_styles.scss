@@ -1,0 +1,64 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+// Justifies text
+article p{
+    text-align:justify;
+}
+
+// Rounded Borders and Margins
+$radius: 0.3em;
+$margin: 0.2em;
+
+@media only screen and (min-width: 1040px) {
+ 
+  body > header {
+    -moz-border-radius-bottomleft: $radius;
+    -moz-border-radius-bottomright: $radius;
+    -webkit-border-radius-bottomleft: $radius;
+    -webkit-border-radius-bottomright: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    margin-bottom: $margin;
+  }
+ 
+  body > nav {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    margin-bottom: $margin;
+  }
+
+  body > footer{
+    -moz-border-radius-bottomleft: $radius;
+    -moz-border-radius-bottomright: $radius;
+    -webkit-border-radius-bottomleft: $radius;
+    -webkit-border-radius-bottomright: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+  }
+
+  #main{
+    -moz-border-radius-topleft: $radius;
+    -moz-border-radius-topright: $radius;
+    -webkit-border-radius-topleft: $radius;
+    -webkit-border-radius-topright: $radius;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  #content{
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius ;
+  }
+
+  #content .blog-index a[rel="full-article"]{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  }
+}
