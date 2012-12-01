@@ -17,7 +17,7 @@ desc "deploy basic rack app to nginx server"
       message = "Site updated at #{Time.now.utc}"
       system "git commit -m '#{message}'"
       puts "\n## Pushing generated #{nginx_dir} website"
-      system "git push origin #{deploy_branch}"
+      system "git push app #{deploy_branch}"
       puts "\n## Heroku deploy complete"
     end
   end
