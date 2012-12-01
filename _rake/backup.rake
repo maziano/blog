@@ -1,3 +1,5 @@
+deploy_branch  = "master"
+
 desc "backup to GitHub"
 multitask :backup do
   puts "\n## Backing up to GitHub"

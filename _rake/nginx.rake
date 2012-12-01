@@ -1,3 +1,9 @@
+# Nginx variables
+nginx_dir       = "_nginx"
+public_dir      = "public"    # compiled site directory
+deploy_branch  = "master"
+
+
 desc "deploy basic rack app to nginx server"
   multitask :nginx do
     puts "## Deploying to nginx server"

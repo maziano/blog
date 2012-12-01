@@ -13,9 +13,6 @@ rsync_delete   = false
 # Deploy variables
 deploy_default = "nginx"
 deploy_branch  = "master"
-heroku_dir      = "_heroku"   # deploy directory (for Github pages deployment)
-# Nginx variables
-nginx_dir       = "_nginx"
 
 # Hidden "dot" files that should be included with the deployed site (see task copydot)
 copy_dot_files = []
@@ -110,23 +107,6 @@ task :watch do
     exit 0
   }
   [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
-end
-
-desc "preview the site in a web browser"
-task :preview do
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
-  puts "Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets"
-  jekyllPid = Process.spawn("jekyll --auto")
-  compassPid = Process.spawn("compass watch")
-  rackupPid = Process.spawn("rackup --host #{server_host} --port #{server_port}")
-
-  trap("INT") {
-    [jekyllPid, compassPid, rackupPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
-    exit 0
-  }
-
-  [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
