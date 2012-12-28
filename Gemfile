@@ -15,6 +15,7 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'rake-minify'
   gem 'thin'
+
   gem 'reduce'
   gem 'html_press'
 end

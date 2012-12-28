@@ -22,7 +22,9 @@ module Jekyll
     
     def compress_html(path, content)
       warn "processing: #{path}"
-      self.output_file(path, HtmlPress.press(content))
+      #self.output_file(path, HtmlPress.press(content))
+      # html compression disabled
+      self.output_file(path, content)
     rescue Exception => e
       warn "parse error occurred while processing: #{path}"
       warn "details: #{e.message.strip}"
@@ -54,8 +56,7 @@ module Jekyll
       case File.extname(dest_path)
         when '.html'
           self.compress_html(dest_path, self.output)
-        else
-          # .txt and .rss
+        else 
           self.output_file(dest_path, self.output)
       end
     end
@@ -77,10 +78,13 @@ module Jekyll
 
       case File.extname(dest_path)
         when '.js'
+          self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         when '.css'
+          self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         when '.png'
+          self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         when '.jpg'
           self.copy_file(path, dest_path)
@@ -89,6 +93,7 @@ module Jekyll
           self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         when '.gif'
+          self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         else
           copy_file(path, dest_path)
