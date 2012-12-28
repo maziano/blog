@@ -22,9 +22,9 @@ module Jekyll
     
     def compress_html(path, content)
       warn "processing: #{path}"
-      #self.output_file(path, HtmlPress.press(content))
+      self.output_file(path, HtmlPress.press(content))
       # html compression disabled
-      self.output_file(path, content)
+      #self.output_file(path, content)
     rescue Exception => e
       warn "parse error occurred while processing: #{path}"
       warn "details: #{e.message.strip}"

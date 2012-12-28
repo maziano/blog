@@ -1,12 +1,12 @@
 var octopress = (function(){
   return {
     addMobileNav: function () {
-      var mainNav = $('ul.main-navigation, ul[role=main-navigation]').before('<fieldset class="mobile-nav">')
+      var mainNav = $('ul.main-navigation, ul[role=main-navigation]').before('<fieldset class="mobile-nav">');
       var mobileNav = $('fieldset.mobile-nav').append('<select>');
       mobileNav.find('select').append('<option value="">Navigate&hellip;</option>');
       var addOption = function() {
         mobileNav.find('select').append('<option value="' + this.href + '">&raquo; ' + $(this).text() + '</option>');
-      }
+      };
       mainNav.find('a').each(addOption);
       $('ul.subscription a').each(addOption);
       mobileNav.find('select').bind('change', function(event) {
@@ -65,11 +65,11 @@ var octopress = (function(){
           classes = getClass(tests);
         }
         return classes;
-      }
+      };
 
       getClass = function (test) {
         return ((Modernizr.testAllProps(test) ? test : "no-"+test).toLowerCase())
-      }
+      };
 
       $('html').addClass(getTestClasses(features));
     }
@@ -154,7 +154,7 @@ var octopress = (function(){
     , renderDeliciousLinks: function (items) {
       var output = "<ul>";
       for (var i=0,l=items.length; i<l; i++) {
-        output += '<li><a href="' + items[i].u + '" title="Tags: ' + (items[i].t == "" ? "" : items[i].t.join(', ')) + '">' + items[i].d + '</a></li>';
+        output += '<li><a href="' + items[i].u + '" title="Tags: ' + (items[i].t === "" ? "" : items[i].t.join(', ')) + '">' + items[i].d + '</a></li>';
       }
       output += "</ul>";
       $('#delicious').html(output);
@@ -171,14 +171,14 @@ var octopress = (function(){
 
         // Use twitter's api to replace t.co shortened urls with expanded ones.
         for (var u in url) {
-          if(url[u].expanded_url != null){
+          if(url[u].expanded_url !== null){
             var shortUrl = new RegExp(url[u].url, 'g');
             text = text.replace(shortUrl, url[u].expanded_url);
             var shortUrl = new RegExp(">"+(url[u].url.replace(/https?:\/\//, '')), 'g');
             text = text.replace(shortUrl, ">"+url[u].display_url);
           }
         }
-        return text
+        return text;
       }
 
       function render(tweets, twitter_user) {
@@ -194,7 +194,7 @@ var octopress = (function(){
       return {
         getFeed: function(target){
           target = $(target);
-          if (target.length == 0) return;
+          if (target.length === 0) return;
           var user = target.attr('data-user');
           var count = parseInt(target.attr('data-count'), 10);
           var replies = target.attr('data-replies') == 'true';
@@ -205,7 +205,7 @@ var octopress = (function(){
             , success: function(data) { render(data.slice(0, count), user); }
           });
         }
-      }
+      };
     })()
     
     , github: (function(){
@@ -217,7 +217,7 @@ var octopress = (function(){
           .replace(/'/g, '&#39;')
           .replace(/</g, '&lt;')
           .replace(/>/g, '&gt;');
-      }
+      };
 
       function render(target, data){
         var i = 0, repos = '';
@@ -230,9 +230,9 @@ var octopress = (function(){
       return {
         showRepos: function(target){
           target = $(target);
-          if (target.length == 0) return;
-          var user = target.attr('data-user')
-          var count = parseInt(target.attr('data-count'))
+          if (target.length === 0) return;
+          var user = target.attr('data-user');
+          var count = parseInt(target.attr('data-count'));
           var skip_forks = target.attr('data-skip') == 'true';
           $.ajax({
               url: "https://api.github.com/users/"+user+"/repos?callback=?"
@@ -260,7 +260,7 @@ var octopress = (function(){
         }
       };
     })()
-  }
+  };
 })();
 
 
@@ -271,7 +271,7 @@ $(document).ready(function() {
   octopress.addCodeLineNumbers();
   octopress.addMobileNav();
   octopress.addSidebarToggler();
-  octopress.twitter.getFeed('#tweets')
+  octopress.twitter.getFeed('#tweets');
   octopress.github.showRepos('#gh_repos');
 });
 
