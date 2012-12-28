@@ -40,6 +40,7 @@ module Jekyll
         when '.html'
           self.compress_html(dest_path, self.output)
         else
+          # .txt and .rss
           self.output_file(dest_path, self.output)
       end
     end
@@ -53,7 +54,8 @@ module Jekyll
       case File.extname(dest_path)
         when '.html'
           self.compress_html(dest_path, self.output)
-        else 
+        else
+          # .txt and .rss
           self.output_file(dest_path, self.output)
       end
     end
