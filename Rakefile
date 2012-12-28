@@ -1,7 +1,6 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
-require 'rake/minify'
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -56,27 +55,7 @@ task :generate do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
   system "jekyll"
-end
-
-Rake::Minify.new(:minify_and_combine) do
-  files = FileList.new("#{source_dir}/javascripts/group/*.*")
-
-  output_file =  "#{source_dir}/javascripts/octopress.min.js"
-
-  puts "BEGIN Minifying #{output_file}"
-  group(output_file) do
-    files.each do |filename|
-      puts "Minifying- #{filename} into #{output_file}"
-      if filename.include? '.min.js'
-        add(filename, :minify => false)
-      else
-        add(filename)
-      end
-    end
-  end
-  puts "END Minifying #{output_file}"
 end
 
 # usage rake generate_only[my-post]
