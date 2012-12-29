@@ -13,11 +13,10 @@ group :development do
   gem 'rb-fsevent', '~> 0.9'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
-  gem 'rake-minify'
   gem 'thin'
 
   gem 'reduce'
-  gem 'html_press'
+  gem 'html_compressor'
 end
 
 gem 'sinatra', '~> 1.3.2'

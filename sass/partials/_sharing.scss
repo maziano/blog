@@ -55,7 +55,7 @@
 
 .googleplus-share {
   @extend .simple-social-button;
-  @include social-button-bg('googleplus', #db583b);
+  @include social-button-bg('google-plus-sign', #db583b);
   &:before { top: 5px; }
 }
 .facebook-share {
