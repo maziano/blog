@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/pacbard/reduce.git
-  revision: 8e87d980bedb7a60bf51197763832868c7239364
+  revision: f60a02e2f832799e04ef534c0ff4e077df0a5a4d
+  branch: closure
   specs:
-    reduce (0.3.1)
+    reduce (0.4.0)
       smusher
 
 GEM

@@ -15,8 +15,8 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'thin'
 
-  gem 'reduce', :git => 'git://github.com/pacbard/reduce.git'
-  #gem 'reduce', :git => 'git://github.com/pacbard/reduce.git', :branch => 'closure'
+  #gem 'reduce', :git => 'git://github.com/pacbard/reduce.git'
+  gem 'reduce', :git => 'git://github.com/pacbard/reduce.git', :branch => 'closure'
 end
 
 gem 'sinatra', '~> 1.3.2'
