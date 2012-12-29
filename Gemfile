@@ -16,7 +16,7 @@ group :development do
   gem 'thin'
 
   gem 'reduce'
-  gem 'html_compressor'
+  gem 'html_compressor', :git => 'git://github.com/pacbard/html_compressor.git'
 end
 
 gem 'sinatra', '~> 1.3.2'

@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/pacbard/html_compressor.git
+  revision: 81e092bab3237380142c5314c9590cb05891d28a
+  specs:
+    html_compressor (0.0.3)
+      POpen4 (>= 0.1.4)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -23,8 +30,6 @@ GEM
     ffi (1.0.11)
     fssm (0.2.9)
     haml (3.1.7)
-    html_compressor (0.0.3)
-      POpen4 (>= 0.1.4)
     httpclient (2.3.0.1)
     jekyll (0.11.2)
       albino (~> 1.3)
@@ -78,7 +83,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   compass (~> 0.12.1)
   haml (~> 3.1.6)
-  html_compressor
+  html_compressor!
   jekyll (~> 0.11.2)
   liquid (~> 2.3.0)
   pygments.rb (~> 0.2.12)

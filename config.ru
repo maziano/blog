@@ -1,4 +1,5 @@
-require 'bundler/setup'
+require 'bundler'
+Bundler.setup(:default, :ci)
 require 'sinatra/base'
 
 # The project root directory
