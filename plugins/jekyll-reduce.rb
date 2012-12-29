@@ -10,10 +10,12 @@ module Jekyll
     end
 
     def compress(path, content)
-      warn "processing: #{path}"
+      puts "processing: #{path}"
       # Copies the original file over and compresses it
       self.output_file(path, content)
+      original = File.size(path).to_f
       self.output_file(path, Reduce.reduce(path))
+      puts "Compression: %0.2f\%" % (((original - File.size(path))/original)*100.0)
     rescue Exception => e
       warn "parse error occurred while processing: #{path}"
       warn "details: #{e.message.strip}"
