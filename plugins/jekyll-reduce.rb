@@ -1,5 +1,4 @@
 require 'reduce'
-require 'html_compressor'
 
 module Jekyll
   module Compressor
@@ -20,16 +19,6 @@ module Jekyll
       self.output_file(path, content)
     end
     
-    def compress_html(path, content)
-      warn "processing: #{path}"
-      compressor = HtmlCompressor::HtmlCompressor.new
-      self.output_file(path, compressor.compress(content))
-    rescue Exception => e
-      warn "parse error occurred while processing: #{path}"
-      warn "details: #{e.message.strip}"
-      warn "copying initial file"
-      self.output_file(path, content)
-    end
   end
 
   class Post
@@ -38,8 +27,8 @@ module Jekyll
     def write(dest)
       dest_path = self.destination(dest)
       case File.extname(dest_path)
-        when '.html'
-          self.compress_html(dest_path, self.output)
+        when '.html', '.xml'
+          self.compress(dest_path, self.output)
         else
           # .txt and .rss
           self.output_file(dest_path, self.output)
@@ -53,8 +42,8 @@ module Jekyll
     def write(dest)
       dest_path = self.destination(dest)
       case File.extname(dest_path)
-        when '.html'
-          self.compress_html(dest_path, self.output)
+        when '.html', '.xml'
+          self.compress(dest_path, self.output)
         else 
           self.output_file(dest_path, self.output)
       end
@@ -76,22 +65,7 @@ module Jekyll
       @@mtimes[path] = mtime
 
       case File.extname(dest_path)
-        when '.js'
-          self.copy_file(path, dest_path)
-          self.compress(dest_path, File.read(path))
-        when '.css'
-          self.copy_file(path, dest_path)
-          self.compress(dest_path, File.read(path))
-        when '.png'
-          self.copy_file(path, dest_path)
-          self.compress(dest_path, File.read(path))
-        when '.jpg'
-          self.copy_file(path, dest_path)
-          self.compress(dest_path, File.read(path))
-        when '.jpeg'
-          self.copy_file(path, dest_path)
-          self.compress(dest_path, File.read(path))
-        when '.gif'
+        when '.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.xml'
           self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         else
