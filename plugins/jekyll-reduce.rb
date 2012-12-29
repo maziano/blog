@@ -11,6 +11,8 @@ module Jekyll
 
     def compress(path, content)
       warn "processing: #{path}"
+      # Copies the original file over and compresses it
+      self.output_file(path, content)
       self.output_file(path, Reduce.reduce(path))
     rescue Exception => e
       warn "parse error occurred while processing: #{path}"
@@ -57,7 +59,7 @@ module Jekyll
       FileUtils.mkdir_p(File.dirname(dest_path))
       FileUtils.cp(path, dest_path)
     end
-
+    
     def write(dest)
       dest_path = self.destination(dest)
 
@@ -66,7 +68,6 @@ module Jekyll
 
       case File.extname(dest_path)
         when '.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.xml'
-          self.copy_file(path, dest_path)
           self.compress(dest_path, File.read(path))
         else
           copy_file(path, dest_path)
