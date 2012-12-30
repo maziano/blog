@@ -78,7 +78,6 @@ task :watch do
   raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
   puts "Starting to watch source with Jekyll and Compass."
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  Rake::Task['minify_and_combine'].execute
   jekyllPid = Process.spawn("jekyll --auto")
   compassPid = Process.spawn("compass watch")
   trap("INT") {
@@ -240,6 +239,7 @@ end
 desc "Default deploy task"
 task :deploy do
   Rake::Task[:copydot].invoke(source_dir, public_dir)
+  Rake::Task[:minify].execute
   Rake::Task["#{deploy_default}"].execute
   Rake::Task[:backup].execute
 end

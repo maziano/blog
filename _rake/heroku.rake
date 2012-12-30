@@ -1,4 +1,4 @@
-heroku_dir      = "_heroku"   # deploy directory (for Github pages deployment)
+heroku_dir  = "_heroku"   # deploy directory (for Github pages deployment)
 
 desc "deploy basic rack app to heroku"
   multitask :heroku do
