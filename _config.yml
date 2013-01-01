@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: http://feeds.feedburner.com/pacbard/blog
 subscribe_email: http://feedburner.google.com/fb/a/mailverify?uri=pacbard/blog&amp;loc=en_US
 # RSS feeds can list your email address if you like
-email: bardellie@gmail.com
+email: bardellie+blog@gmail.com
 # humans.txt file can list your location if specified
 # it also uses 'author', 'email', 'twitter_user' and  'github_user'
 location: California, USA
