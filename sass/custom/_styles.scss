@@ -13,7 +13,7 @@ article p{
 $radius: 0.3em;
 $margin: 0.2em;
 
-@media only screen and (min-width: 1040px) {
+@media only screen and (min-width: $default-width) {
  
   body > header {
     -moz-border-radius-bottomleft: $radius;

@@ -219,11 +219,11 @@ a:hover {
 }
 
 body {
-	@media screen and (max-width: 1040px){
+	@media screen and (max-width: $default-width){
 			margin: 0 0;
 	}
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: $phone-width){
 	.container {
 		.credit-box {
 			display: none;

@@ -1,7 +1,7 @@
 .post{
 	h1.title, .entry-content{
 		margin-left: 200px;
-		@media screen and (max-width: 800px){
+		@media screen and (max-width: $phone-width){
 			margin-left: 0;
 		}
 	}
@@ -12,7 +12,7 @@
 		font-size: 0.9em;
 		color: $color-gray02;
 		width: 170px;
-		@media screen and (max-width: 800px){
+		@media screen and (max-width: $phone-width){
 			margin-top: 15px;
 			position: static;
 			width: auto;
@@ -31,7 +31,7 @@
 				position: absolute;
 				left: 0;
 			}
-			@media screen and (max-width: 800px){
+			@media screen and (max-width: $phone-width){
 				@include inline-block;
 				margin-right: 30px;
 			}

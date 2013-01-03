@@ -1,4 +1,7 @@
-$max-width: 1000px;
+//Desktop view
+$default-width: 1200px;
+// Mobile view
+$phone-width: 800px;
 
 *{
     margin: 0;
@@ -10,10 +13,10 @@ body{
 	font-size: 14px;
 	background: $color-background;
 	color: $color-gray01;
-	@media screen and (max-width: 1040px){
+	@media screen and (max-width: $default-width){
 		margin: 0 20px;
 	}
-	@media screen and (max-width: 600px){
+	@media screen and (max-width: $phone-width){
 		font-size: 13px;
 	}
 }
@@ -41,9 +44,9 @@ a{
 	@include pie-clearfix;
 }
 .inner{
-	width: $max-width;
+	width: $default-width;
 	margin: 0 auto;
-	@media screen and (max-width: 1040px){
+	@media screen and (max-width: $default-width){
 		width: 100%;
 	}
 }
@@ -66,5 +69,5 @@ a{
 img {
     @extend .flex-content;
     @extend .basic-alignment;
-    @include shadow-box;
-  }
+    @include shadow-box; 
+}
