@@ -12,13 +12,11 @@ task :minify do
       when '.html', '.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.xml'
         puts "processing: #{file}"
         original += File.size(file).to_f
-        puts "#{File.size(file)}"
         min = Reduce.reduce(file)
         File.open(file, "w") do |f|
           f.write(min)
         end
         compressed += File.size(file)
-        puts "#{File.size(file)}"
       else
         puts "skipping: #{file}"
       end

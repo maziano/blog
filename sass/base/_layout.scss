@@ -1,7 +1,7 @@
 $max-width: 1000px;
 
 *{
-	margin: 0;
+    margin: 0;
 	padding: 0;
 }
 body{
@@ -47,3 +47,8 @@ a{
 		width: 100%;
 	}
 }
+
+img.left { float: left; margin-right: 1.5em; }
+img.right { float: right; margin-left: 1.5em; }
+img.center { display:block; margin: 0 auto 1.5em; }
+img.left, img.right { margin-bottom: .8em; }
