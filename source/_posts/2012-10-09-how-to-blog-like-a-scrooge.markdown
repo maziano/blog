@@ -3,7 +3,7 @@ layout: post
 title: "How to blog scrooge style"
 date: 2012-10-09 14:42
 comments: true
-tags: [How To, Blog, Web Hosting, CloudFlare, Heroku, Octopress]
+categories: [How To, Blog, Web Hosting, CloudFlare, Heroku, Octopress]
 ---
 
 {% img right http://static.pacbard.tk/media/2012/scrooge.jpeg 319 338 Scrooge style%}

@@ -3,7 +3,7 @@ layout: post
 title: "Supercharge Octopress with Rack-Cache"
 date: 2012-10-21 12:23
 comments: true
-tags: ["Octopress", "Cache"]
+categories: ["Octopress", "Cache"]
 keywords: "octopress, cache, memcached, rack-cache"
 ---
 <p>Since your <a href="http://octopress.org/">Octopress</a> blog is a static website, it is natural

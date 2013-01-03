@@ -10,6 +10,9 @@
 		</div>	
 		<div class="mid-col">
 			<div class="mid-col-container">
+                {% if page.title %}
+                <h1 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+                {% endif %}
 				<div id="content" class="inner">{{ content | expand_urls: root_url }}</div>
 			</div>
 			<footer id="footer" class="inner">{% include footer.html %}</footer>

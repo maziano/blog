@@ -3,7 +3,7 @@ layout: post
 title: "Search Using DuckDuckGo"
 date: 2012-10-26 12:28
 comments: true
-tags: ["Octopress"]
+categories: ["Octopress"]
 keywords: "octopress, duckduckgo, search"
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "LaTeX in Octorpess"
 date: 2012-10-06 09:24
 comments: true
-tags: [LaTeX, GitHub Pages, How To]
+categories: [LaTeX, GitHub Pages, How To]
 keywords: "latex, octopress, mathjax"
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "Compile LaTeX in the cloud"
 date: 2012-10-20 12:36
 comments: true
-tags: ["LaTeX"]
+categories: ["LaTeX"]
 ---
 
 Installing LaTeX on a computer (especially a Windows one) feels so much like 1995.

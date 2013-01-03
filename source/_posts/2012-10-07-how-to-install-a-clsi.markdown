@@ -3,7 +3,7 @@ layout: post
 title: "How to install a CLSI"
 date: 2012-10-07 20:32
 comments: true
-tags: [LaTeX, CLSI, How To]
+categories: [LaTeX, CLSI, How To]
 ---
 This guide explains how to install a CLSI server using passenger standalone server running Debian Squeeze.
 The steps can easely be adapted to any linux installation.

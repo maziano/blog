@@ -3,7 +3,7 @@ layout: post
 title: "XKCD in Mathematica"
 date: 2012-10-06 13:02
 comments: true
-tags: [Mathematica, XKCD, StackExchange]
+categories: [Mathematica, XKCD, StackExchange]
 ---
 
 A Mathematica function that generates XKCD charts!

@@ -48,7 +48,23 @@ a{
 	}
 }
 
-img.left { float: left; margin-right: 1.5em; }
-img.right { float: right; margin-left: 1.5em; }
-img.center { display:block; margin: 0 auto 1.5em; }
-img.left, img.right { margin-bottom: .8em; }
+// img utilities
+@mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
+  @include border-radius($border-radius);
+  @include box-shadow($shadow);
+  @include box-sizing(border-box);
+  border: $border;
+}
+.basic-alignment {
+  &.left { float: left; margin-right: 1.5em; }
+  &.right { float: right; margin-left: 1.5em; }
+  &.center { display:block; margin: 0 auto 1.5em; }
+  &.left, &.right { margin-bottom: .8em; }
+}
+.flex-content { max-width: 100%; height: auto; }
+
+img {
+    @extend .flex-content;
+    @extend .basic-alignment;
+    @include shadow-box;
+  }

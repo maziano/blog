@@ -3,7 +3,7 @@ layout: post
 title: "Cache Octopress with Memcachier"
 date: 2012-10-28 12:30
 comments: true
-tags: ["Octopress", "Cache"]
+categories: ["Octopress", "Cache"]
 keywords: "octopress, cache, memcachier, memcached, cache"
 ---
 

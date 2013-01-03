@@ -3,7 +3,7 @@ layout: post
 title: "Remove Query Strings from Octopress Assets"
 date: 2012-10-27 12:18
 comments: true
-tags: ["Octopress", "Compass"]
+categories: ["Octopress", "Compass"]
 keywords: "octopress, compass, query strings, image_url()"
 ---
 Since [Octopress](http://octopress.org/) uses [Compass](http://compass-style.org/)
