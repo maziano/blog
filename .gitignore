@@ -3,6 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+.themes
 _deploy
 _heroku
 _nginx
