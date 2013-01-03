@@ -2,34 +2,3 @@
 // To give it a try, uncomment some of the lines below rebuild your blog, and see how it works. your sites's.
 // If you love to use Web Fonts, you also need to add some lines to source/_includes/custom/head.html
 
-$sans: 'Inder', "Helvetica Neue", Arial, sans-serif !default;
-$serif: 'Inder', Georgia, Times, "Times New Roman", serif !default;;
-$mono: 'Oxygen Mono', Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;;
-$heading-font-family: 'Port Lligat Slab', "Helvetica Neue", Arial, sans-serif !default;
-$header-title-font-family: 'Port Lligat Slab', "Helvetica Neue", Arial, sans-serif !default;
-$header-subtitle-font-family: $heading-font-family !default;
-
-@include font-face('Inder',
-                   font-files('inder-regular-webfont.eot',
-                              'inder-regular-webfont.woff',
-                              'inder-regular-webfont.ttf',
-                              'inder-regular-webfont.svg#inderregular'),
-                   'inder-regular-webfont.eot',
-                   normal,
-                   normal);
-@include font-face('Port Lligat Slab',
-                   font-files('portlligatslab-regular-webfont.eot',
-                              'portlligatslab-regular-webfont.woff',
-                              'portlligatslab-regular-webfont.ttf',
-                              'portlligatslab-regular-webfont.svg'),
-                   'portlligatslab-regular-webfont.eot',
-                   normal,
-                   normal);
-@include font-face('Oxygen Mono',
-                   font-files('oxygenmono-regular-webfont.eot',
-                              'oxygenmono-regular-webfont.woff',
-                              'oxygenmono-regular-webfont.ttf',
-                              'oxygenmono-regular-webfont.svg'),
-                   'oxygenmono-regular-webfont.eot',
-                   normal,
-                   normal);
