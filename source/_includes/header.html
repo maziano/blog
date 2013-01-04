@@ -36,15 +36,5 @@
 		<a class="rss" href="{{ site.subscribe_rss }}" title="RSS"></a>
 		{% endif %}
 	</div>
-    {% if site.simple_search %}
-    <div class="search">
-        <form action="http://google.com/search" method="get">
-          <fieldset role="search">
-            <input type="hidden" name="sites" value="{{ site.url | shorthand_url }}" />
-            <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-          </fieldset>
-        </form>
-    </div>
-    {% endif %}
 </nav>
 {% include custom/header.html %}

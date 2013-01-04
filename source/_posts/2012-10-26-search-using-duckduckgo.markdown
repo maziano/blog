@@ -21,7 +21,7 @@ in this way:
 {% if site.simple_search %}
 <form action="{{ site.simple_search }}" method="get">
   <fieldset role="search">
-    <input type="hidden" name="sites" value="duckduckgo.com" />
+    <input type="hidden" name="sites" value="{{ site.url | shorthand_url }}" />
     <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
   </fieldset>
 </form>
