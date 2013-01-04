@@ -4,4 +4,10 @@ title: We are sorry...
 footer: false
 ---
 <p>The page you are looking for cannot be found.</p>
-<p>Try the <a href="/archives/">archiv</a>e for a list of recently published posts.</p>
+<p>Here is a list of recently published posts.</p>
+
+<div id="blog-archives">
+{% for post in site.posts limit: 10 reverse %}
+  {% include archive_post.html %}
+{% endfor %}
+</div>
