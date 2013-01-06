@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing Fancybox on Octopress"
+title: "Installing Fancybox with Octopress"
 date: 2013-01-05 12:37
 comments: true
 categories: [Octopress, Fancyox]
