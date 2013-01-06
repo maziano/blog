@@ -5,7 +5,7 @@ date: 2013-01-05 12:37
 comments: true
 categories: [Octopress, Fancyox]
 keywords: "Octopress, Fancybox, Images, Photo Gallery"
-fancybox: true
+fancybox: false
 ---
 
 I wanted to use Lightbox to display images in a photogallery in my Octopress blog.
