@@ -132,6 +132,12 @@ client looks for the login file in its installation directory.  Update the sampl
 login file with your own settings and it all should work well.
 
 ## MS Windows
+{% blockquote %}
+Downloading binary files has been [deprecated by GitHub](https://github.com/blog/1302-goodbye-uploads).
+
+If the download binary is removed from the repository, you will have to compile
+the file locally.
+{% endblockquote %}
 If you use <a href="http://en.wikipedia.org/wiki/Microsoft_Windows">MS Windows</a>,
 I am maintaining a ```exe``` version of the compiler that does not require
 to install Python on the computer.  You can find the executable on
