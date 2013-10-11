@@ -8,7 +8,7 @@ categories: [CLSI, LaTeX, OpenShift]
 
 In the last few months, I have work on a Common Latex Server Interface
 port to Python. The repo is hosted on
-[GitHub](http://github.com/pacbard/clsi.py).
+[GitHub](http://github.com/pacbard/clsipy).
 
 # Installation
 This CLSI implementation will work out-of-the-box on
@@ -33,7 +33,7 @@ latexmk     dvi, ps, pdf (png, jpg, tiff, bmp with standalone class)
 ```
 
 It is also possible to include compiler options within the XML request by adding
-it to the XML compiler option (e.g., ```"latexmk -pdf``` will compile the file
+it to the XML compiler option (e.g., ```"latexmk -pdf"``` will compile the file
 with```latexmk``` as compiler and ```-pdf``` as option.
 
 # Tokens
