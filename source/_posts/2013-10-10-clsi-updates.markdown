@@ -46,11 +46,11 @@ as soon as possible. The command ```rhc env-set CLSI_TOKEN <TOKEN VALUE> --app N
 can be used to specify env variables client side.
 
 # CLI Client
-The [Remote Latex CLSI](http://pacbard.github.io/RLatex) is the suggested
-companion application to access any CLSI server. This project's goal is to
-provide a LaTeX-like executable that leverage the CLSI server to compile the
-file. At this time, the CLSI has been tested on Windows 7 (both using the native
-python application or the compiled .exe), Mac OS 10.7, and Linux without major
+The [Remote Latex CLI](http://pacbard.github.io/RLatex) is the suggested
+application to access a CLSI server. This project's goal is to
+provide a LaTeX-like executable that leverages the CLSI server as compiler.
+At this time, the CLSI has been tested on Windows 7 (both using the native
+python application or the provided .exe), Mac OS 10.7, and Linux without major
 issues.
 
 # Future Development
