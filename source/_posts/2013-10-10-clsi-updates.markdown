@@ -14,7 +14,7 @@ port to Python. The repo is hosted on
 This CLSI implementation will work out-of-the-box on
 [OpenShift](http://openshift.com). A ```pre-start``` hook guarantees that the
 current version of TexLive is installed. To update the installation, it is best
-to use the incldued ```tlmng``` utility or to delete the TexLive directory from
+to use the incldued ```tlmgr``` utility or to delete the TexLive directory from
 the server, which would force the complete reisntallation of LaTeX.
 
 # Support for custom build engines
