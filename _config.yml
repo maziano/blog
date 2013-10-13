@@ -16,8 +16,8 @@ description: The World According to Pacbard - Just another Blog
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: http://feeds.feedburner.com/pacbard/blog
-subscribe_email: http://feedburner.google.com/fb/a/mailverify?uri=pacbard/blog&amp;loc=en_US
+subscribe_rss: http://feedpress.me/pacbard 
+#subscribe_email:
 # RSS feeds can list your email address if you like
 email: bardellie+blog@gmail.com
 # humans.txt file can list your location if specified
