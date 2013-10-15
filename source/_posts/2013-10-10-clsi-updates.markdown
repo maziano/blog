@@ -6,7 +6,7 @@ comments: true
 categories: [CLSI, LaTeX, OpenShift]
 ---
 
-In the last few months, I have work on a Common Latex Server Interface
+In the last few months, I worked on a Common Latex Server Interface
 port to Python. The repo is hosted on
 [GitHub](http://github.com/pacbard/clsipy).
 
