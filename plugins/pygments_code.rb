@@ -2,6 +2,7 @@ require './plugins/raw'
 require './plugins/config'
 require 'albino'
 require 'pygments'
+require 'rubypython'
 require 'fileutils'
 require 'digest/md5'
 
